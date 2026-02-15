@@ -1,0 +1,16 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#0f0f1b;color:white;}
+nav{position:fixed;width:100%;display:flex;justify-content:space-between;padding:20px 10%;background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);}
+.nav-links{display:flex;gap:30px;list-style:none;}
+.nav-links a{color:white;text-decoration:none;}
+.hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#1d2671,#c33764);}
+.btn-primary{padding:12px 25px;border-radius:30px;background:#00f0ff;color:black;text-decoration:none;}
+section{padding:100px 10%;}
+.about-container{display:flex;gap:40px;align-items:center;}
+.about img{width:250px;border-radius:20px;}
+.card{background:#1c1c2e;padding:20px;border-radius:15px;margin-bottom:20px;}
+.skill-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;}
+.skill-list div{background:#1c1c2e;padding:15px;border-radius:10px;}
+.contact{text-align:center;}
+footer{text-align:center;padding:20px;background:#111;}
