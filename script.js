@@ -1,4 +1,4 @@
-// Scroll Reveal
+// Reveal Animation
 const reveals = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
@@ -16,7 +16,7 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
-// Navbar Shadow on Scroll
+// Navbar Shadow
 const navbar = document.getElementById('navbar');
 
 window.addEventListener('scroll', () => {
@@ -25,4 +25,46 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('scrolled');
     }
+});
+
+// Active Nav Highlight
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target + "+";
+        }
+    };
+
+    updateCounter();
 });
