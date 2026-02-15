@@ -4,79 +4,247 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sharif Azmaine Ratul | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/4b8b3d9b0f.js" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+
+body{
+background:#0c0c14;
+color:#fff;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+nav{
+position:fixed;
+width:100%;
+background:rgba(15,15,25,0.8);
+backdrop-filter:blur(12px);
+padding:20px 0;
+z-index:1000;
+}
+
+nav .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-weight:800;
+font-size:1.3rem;
+letter-spacing:2px;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:30px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00e5ff;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+}
+
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:3.8rem;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.hero-text h2{
+font-size:1.4rem;
+color:#00e5ff;
+margin-bottom:25px;
+}
+
+.hero-text p{
+color:#9aa0a6;
+margin-bottom:35px;
+max-width:500px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#00e5ff;
+color:#000;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+.hero-img{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.hero-img img{
+width:420px;
+border-radius:20px;
+box-shadow:0 40px 80px rgba(0,0,0,0.6);
+}
+
+section{
+padding:120px 0;
+}
+
+.section-title{
+font-size:2.4rem;
+margin-bottom:60px;
+}
+
+.card{
+background:#151522;
+padding:35px;
+border-radius:18px;
+margin-bottom:25px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.skill{
+background:#151522;
+padding:25px;
+border-radius:15px;
+}
+
+footer{
+background:#111;
+padding:40px 0;
+text-align:center;
+margin-top:60px;
+color:#888;
+}
+</style>
 </head>
+
 <body>
 
 <nav>
+<div class="container">
 <div class="logo">RATUL</div>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<div>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
 </nav>
 
-<section id="home" class="hero">
-  <div class="hero-text">
-    <h1>Sharif Azmaine Ratul</h1>
-    <h2>Admin Executive & Digital Marketing Specialist</h2>
-    <p>
-      Managing international freight documentation and delivering strategic digital marketing solutions with precision and creativity.
-    </p>
-    <a href="resume.pdf" download class="btn-primary">Download CV</a>
-  </div>
+<section class="hero">
+<div class="container hero-content">
+<div class="hero-text">
+<h1>Sharif Azmaine Ratul</h1>
+<h2>Admin Executive & Digital Marketing Specialist</h2>
+<p>
+Specialized in international logistics documentation, operational coordination, and strategic digital marketing execution.
+</p>
+<a href="resume.pdf" download class="btn">Download CV</a>
+</div>
 
-  <div class="hero-img">
-    <img src="images/profile.jpg" alt="Sharif Azmaine Ratul">
-  </div>
+<div class="hero-img">
+<img src="images/profile.jpg" alt="Sharif Azmaine Ratul">
+</div>
+</div>
 </section>
 
-
 <section id="about">
-<div class="about-container">
-<img src="images/profile.jpg" alt="Profile Photo">
-<div>
-<h2>About Me</h2>
-<p>Admin Executive at Savino Del Bene with expertise in logistics documentation, B/L processing, and digital marketing strategy.</p>
-</div>
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<p style="max-width:700px;color:#9aa0a6;">
+Admin Executive at Savino Del Bene managing freight documentation, Bills of Lading, compliance procedures, and operational reporting. 
+Alongside corporate responsibilities, I execute performance-driven digital marketing campaigns delivering measurable growth.
+</p>
 </div>
 </section>
 
 <section id="experience">
-<h2>Experience</h2>
+<div class="container">
+<h2 class="section-title">Experience</h2>
+
 <div class="card">
 <h3>Admin Executive — Savino Del Bene</h3>
-<p>2025 – Present</p>
+<p style="color:#9aa0a6;">2025 – Present | Chattogram</p>
 </div>
+
 <div class="card">
 <h3>Digital Marketing Specialist</h3>
-<p>2022 – 2025</p>
+<p style="color:#9aa0a6;">2022 – 2025 | Freelance</p>
+</div>
+
 </div>
 </section>
 
 <section id="skills">
-<h2>Core Skills</h2>
-<div class="skill-list">
-<div>Digital Marketing</div>
-<div>Logistics Documentation</div>
-<div>Administration</div>
-<div>SEO Strategy</div>
+<div class="container">
+<h2 class="section-title">Core Skills</h2>
+
+<div class="skills-grid">
+<div class="skill">Digital Marketing Strategy</div>
+<div class="skill">Bill of Lading Processing</div>
+<div class="skill">Freight Documentation</div>
+<div class="skill">SEO & Backlinking</div>
+<div class="skill">Administrative Operations</div>
+<div class="skill">Client Communication</div>
+</div>
+
 </div>
 </section>
 
-<section id="contact" class="contact">
-<h2>Contact</h2>
-<p>Email: sharif.azmaine67@gmail.com</p>
-<p>Phone: +8801701064355</p>
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact</h2>
+<p style="color:#9aa0a6;">Email: sharif.azmaine67@gmail.com</p>
+<p style="color:#9aa0a6;">Phone: +8801701064355</p>
+</div>
 </section>
 
-<footer>© 2026 Sharif Azmaine Ratul</footer>
+<footer>
+© 2026 Sharif Azmaine Ratul
+</footer>
 
-<script src="script.js"></script>
 </body>
 </html>
