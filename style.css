@@ -6,13 +6,30 @@
   --muted: #9aa0a6;
 }
 
+/* ===== Base ===== */
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
+
+/* Premium background glow */
+body::before {
+  content: "";
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,229,255,0.15), transparent 70%);
+  z-index: -1;
+}
+
+/* ===== Navigation ===== */
 
 nav {
   position: fixed;
@@ -49,9 +66,13 @@ nav {
   color: var(--accent);
 }
 
+/* ===== Sections ===== */
+
 section {
   padding: 120px 8%;
 }
+
+/* ===== Hero Section ===== */
 
 .hero {
   display: flex;
@@ -63,82 +84,147 @@ section {
 
 .hero-text {
   flex: 1;
+  animation: fadeUp 1s ease forwards;
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
 }
 
 .hero-text h2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--accent);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .hero-text p {
   color: var(--muted);
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  max-width: 520px;
 }
 
 .hero-img {
   flex: 1;
   display: flex;
   justify-content: center;
+  animation: fadeRight 1.2s ease forwards;
 }
 
 .hero-img img {
-  width: 380px;
+  width: 420px;
   border-radius: 20px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  transition: 0.4s;
 }
+
+.hero-img img:hover {
+  transform: translateY(-10px);
+}
+
+/* ===== Button ===== */
 
 .btn-primary {
   background: var(--accent);
   color: black;
-  padding: 12px 28px;
+  padding: 14px 32px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,229,255,0.3);
+  display: inline-block;
 }
 
 .btn-primary:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,229,255,0.5);
 }
 
+/* ===== Titles ===== */
+
 .section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
+  font-size: 2.4rem;
+  margin-bottom: 60px;
 }
+
+/* ===== Cards ===== */
 
 .card {
   background: var(--card);
-  padding: 30px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  transition: 0.3s;
+  padding: 35px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  transition: 0.4s;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card:hover {
   transform: translateY(-8px);
 }
 
+/* ===== Skills ===== */
+
 .skill-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .skill-list div {
   background: var(--card);
-  padding: 20px;
-  border-radius: 12px;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s;
 }
+
+.skill-list div:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== Footer ===== */
 
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   background: #111;
   margin-top: 60px;
+  color: #888;
+}
+
+/* ===== Animations ===== */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 320px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
 }
