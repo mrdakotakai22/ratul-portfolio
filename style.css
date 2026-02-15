@@ -13,7 +13,6 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* Glow */
 body::before{
 content:"";
 position:fixed;
@@ -26,7 +25,6 @@ filter:blur(120px);
 z-index:-1;
 }
 
-/* Layout */
 .container{
 width:90%;
 max-width:1200px;
@@ -48,7 +46,7 @@ max-width:700px;
 margin-bottom:50px;
 }
 
-/* Nav */
+/* NAV */
 nav{
 position:fixed;
 width:100%;
@@ -63,31 +61,35 @@ nav.scrolled{
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-nav .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-weight:800;
-font-size:1.3rem;
-letter-spacing:2px;
-}
-
 .nav-links a{
 color:#fff;
 text-decoration:none;
 margin-left:30px;
 font-weight:500;
+position:relative;
 transition:0.3s;
 }
 
-.nav-links a:hover{
+.nav-links a.active{
 color:#00e5ff;
 }
 
-/* Hero */
+.nav-links a::after{
+content:"";
+position:absolute;
+bottom:-5px;
+left:0;
+width:0;
+height:2px;
+background:#00e5ff;
+transition:0.3s;
+}
+
+.nav-links a.active::after{
+width:100%;
+}
+
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
@@ -107,8 +109,17 @@ font-weight:800;
 margin-bottom:10px;
 }
 
-.hero-text h1 span{
-color:#00e5ff;
+.glow-name{
+background:linear-gradient(45deg,#00e5ff,#3a86ff,#00e5ff);
+background-size:200% 200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:gradientMove 4s infinite linear;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+100%{background-position:200% 50%;}
 }
 
 .hero-text h2{
@@ -121,6 +132,22 @@ margin-bottom:25px;
 color:#94a3b8;
 margin-bottom:35px;
 max-width:520px;
+}
+
+.stats{
+display:flex;
+gap:40px;
+margin-bottom:40px;
+}
+
+.stat h3{
+font-size:2rem;
+color:#00e5ff;
+}
+
+.stat p{
+font-size:0.9rem;
+color:#94a3b8;
 }
 
 .btn{
@@ -170,11 +197,6 @@ gap:25px;
 background:rgba(22,22,34,0.6);
 padding:25px;
 border-radius:15px;
-transition:0.3s;
-}
-
-.skill:hover{
-transform:translateY(-6px);
 }
 
 /* Contact */
@@ -214,7 +236,7 @@ transform:translateY(-10px);
 border:1px solid rgba(0,229,255,0.4);
 }
 
-/* Reveal Animation */
+/* Reveal */
 .reveal{
 opacity:0;
 transform:translateY(40px);
@@ -226,20 +248,14 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* Footer */
-footer{
-background:#111;
-padding:40px 0;
-text-align:center;
-color:#888;
-margin-top:60px;
-}
-
 /* Responsive */
 @media(max-width:900px){
 .hero-content{
 flex-direction:column;
 text-align:center;
+}
+.stats{
+justify-content:center;
 }
 .hero-img img{
 width:300px;
