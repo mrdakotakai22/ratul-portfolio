@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sharif Azmaine Ratul | Portfolio</title>
+<title>Sharif Azmaine Ratul | Admin Executive & Digital Marketing Professional</title>
+
+<meta property="og:title" content="Sharif Azmaine Ratul | Admin Executive & Digital Marketing Professional">
+<meta property="og:description" content="International Logistics Operations & Strategic Digital Marketing Professional">
+<meta property="og:type" content="website">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -17,8 +21,7 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* ===== Floating Glow Background ===== */
-
+/* Floating Glow */
 body::before{
 content:"";
 position:fixed;
@@ -43,8 +46,7 @@ max-width:1200px;
 margin:auto;
 }
 
-/* ===== NAV ===== */
-
+/* NAV */
 nav{
 position:fixed;
 width:100%;
@@ -78,8 +80,7 @@ nav a:hover{
 color:#00e5ff;
 }
 
-/* ===== HERO ===== */
-
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
@@ -120,12 +121,6 @@ height:4px;
 background:#00e5ff;
 margin:20px 0;
 border-radius:5px;
-animation:growLine 1.5s ease forwards;
-}
-
-@keyframes growLine{
-from{width:0}
-to{width:80px}
 }
 
 .hero-text h2{
@@ -161,12 +156,6 @@ box-shadow:0 25px 60px rgba(0,229,255,0.5);
 flex:1;
 display:flex;
 justify-content:center;
-animation:fadeRight 1.2s ease forwards;
-}
-
-@keyframes fadeRight{
-from{opacity:0;transform:translateX(60px)}
-to{opacity:1;transform:translateX(0)}
 }
 
 .hero-img img{
@@ -180,8 +169,7 @@ transition:0.4s;
 transform:translateY(-15px);
 }
 
-/* ===== SECTIONS ===== */
-
+/* SECTIONS */
 section{
 padding:120px 0;
 }
@@ -191,8 +179,7 @@ font-size:2.4rem;
 margin-bottom:60px;
 }
 
-/* ===== GLASS CARDS ===== */
-
+/* GLASS CARDS */
 .card{
 background:rgba(22,22,34,0.6);
 backdrop-filter:blur(10px);
@@ -241,18 +228,15 @@ margin-top:60px;
 color:#888;
 }
 
-/* ===== RESPONSIVE ===== */
-
+/* RESPONSIVE */
 @media(max-width:900px){
 .hero-content{
 flex-direction:column;
 text-align:center;
 }
-
 .hero-img img{
 width:300px;
 }
-
 .hero-text h1{
 font-size:2.8rem;
 }
@@ -268,6 +252,7 @@ font-size:2.8rem;
 <div>
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
+<a href="#impact">Impact</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 </div>
@@ -276,21 +261,18 @@ font-size:2.8rem;
 
 <section class="hero">
 <div class="container hero-content">
-
 <div class="hero-text">
 <h1>Sharif Azmaine <span>Ratul</span></h1>
 <div class="accent-line"></div>
-<h2>Admin Executive & Digital Marketing Specialist</h2>
+<h2>Admin Executive & Digital Marketing Professional</h2>
 <p>
-Managing international logistics operations and executing strategic digital campaigns with precision and measurable results.
+I streamline international logistics operations and deliver measurable digital growth through structured execution, compliance precision, and strategic marketing systems.
 </p>
 <a href="resume.pdf" download class="btn">Download CV</a>
 </div>
-
 <div class="hero-img">
 <img src="images/profile.jpg" alt="Sharif Azmaine Ratul">
 </div>
-
 </div>
 </section>
 
@@ -298,24 +280,37 @@ Managing international logistics operations and executing strategic digital camp
 <div class="container">
 <h2 class="section-title">About Me</h2>
 <p style="max-width:700px;color:#94a3b8;">
-Admin Executive at Savino Del Bene managing freight documentation, Bills of Lading, compliance procedures, and operational reporting. 
-Alongside corporate responsibilities, I execute performance-driven digital marketing campaigns delivering measurable growth.
+Results-driven Admin Executive with hands-on experience in freight forwarding, B/L processing, workflow optimization, and multinational coordination. Alongside corporate operations, I execute structured digital marketing strategies focused on measurable performance and long-term growth.
 </p>
 </div>
 </section>
 
 <section id="experience">
 <div class="container">
-<h2 class="section-title">Experience</h2>
+<h2 class="section-title">Professional Experience</h2>
 
 <div class="card">
 <h3>Admin Executive — Savino Del Bene</h3>
-<p style="color:#9aa0a6;">2025 – Present | Chattogram</p>
+<p style="color:#9aa0a6;">October 2025 – Present | Chattogram</p>
 </div>
 
 <div class="card">
-<h3>Digital Marketing Specialist</h3>
-<p style="color:#9aa0a6;">2022 – 2025 | Freelance</p>
+<h3>Digital Marketing Specialist (Freelance)</h3>
+<p style="color:#9aa0a6;">2022 – 2025</p>
+</div>
+
+</div>
+</section>
+
+<section id="impact">
+<div class="container">
+<h2 class="section-title">Professional Impact</h2>
+
+<div class="skills-grid">
+<div class="skill">300+ Bills of Lading Processed</div>
+<div class="skill">100% Documentation Accuracy</div>
+<div class="skill">50+ Digital Campaigns Executed</div>
+<div class="skill">International Freight Coordination</div>
 </div>
 
 </div>
@@ -323,15 +318,15 @@ Alongside corporate responsibilities, I execute performance-driven digital marke
 
 <section id="skills">
 <div class="container">
-<h2 class="section-title">Core Skills</h2>
+<h2 class="section-title">Core Competencies</h2>
 
 <div class="skills-grid">
+<div class="skill">Freight Documentation & B/L Processing</div>
+<div class="skill">Workflow Optimization</div>
 <div class="skill">Digital Marketing Strategy</div>
-<div class="skill">Bill of Lading Processing</div>
-<div class="skill">Freight Documentation</div>
-<div class="skill">SEO & Backlinking</div>
+<div class="skill">SEO & Content Strategy</div>
 <div class="skill">Administrative Operations</div>
-<div class="skill">Client Communication</div>
+<div class="skill">Cross-Functional Coordination</div>
 </div>
 
 </div>
@@ -350,6 +345,14 @@ Alongside corporate responsibilities, I execute performance-driven digital marke
 </footer>
 
 <script>
+document.querySelectorAll('nav a').forEach(anchor=>{
+anchor.addEventListener('click',function(e){
+e.preventDefault();
+document.querySelector(this.getAttribute('href'))
+.scrollIntoView({behavior:'smooth'});
+});
+});
+
 const cards = document.querySelectorAll('.card');
 function revealCards(){
 cards.forEach(card=>{
