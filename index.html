@@ -6,231 +6,7 @@
 <title>Sharif Azmaine Ratul | Admin Executive & Digital Marketing Professional</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
-
-body{
-background:#0c0c14;
-color:#fff;
-line-height:1.6;
-overflow-x:hidden;
-}
-
-/* ===== Glow Background ===== */
-body::before{
-content:"";
-position:fixed;
-top:-200px;
-right:-200px;
-width:700px;
-height:700px;
-background:radial-gradient(circle, rgba(0,229,255,0.25), transparent 70%);
-filter:blur(120px);
-z-index:-1;
-}
-
-/* ===== Layout ===== */
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-section{
-padding:120px 0;
-}
-
-/* ===== NAV ===== */
-nav{
-position:fixed;
-width:100%;
-background:rgba(15,15,25,0.85);
-backdrop-filter:blur(12px);
-padding:20px 0;
-z-index:1000;
-}
-
-nav .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-weight:800;
-font-size:1.3rem;
-letter-spacing:2px;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:30px;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#00e5ff;
-}
-
-/* ===== HERO ===== */
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-}
-
-.hero-content{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:80px;
-}
-
-.hero-text{
-flex:1;
-}
-
-.hero-text h1{
-font-size:4rem;
-font-weight:800;
-margin-bottom:10px;
-}
-
-.hero-text h1 span{
-color:#00e5ff;
-}
-
-.hero-text h2{
-font-size:1.4rem;
-color:#cbd5e1;
-margin-bottom:25px;
-}
-
-.hero-text p{
-color:#94a3b8;
-margin-bottom:35px;
-max-width:520px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 32px;
-background:#00e5ff;
-color:#000;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-6px);
-}
-
-.hero-img img{
-width:420px;
-border-radius:25px;
-box-shadow:0 50px 100px rgba(0,0,0,0.7);
-}
-
-/* ===== TITLES ===== */
-.section-title{
-font-size:2.2rem;
-margin-bottom:50px;
-}
-
-/* ===== CARDS ===== */
-.card{
-background:rgba(22,22,34,0.6);
-backdrop-filter:blur(10px);
-padding:35px;
-border-radius:18px;
-margin-bottom:25px;
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.skill{
-background:rgba(22,22,34,0.6);
-padding:25px;
-border-radius:15px;
-}
-
-/* ===== CONTACT FIXED CLEAN STYLE ===== */
-
-.contact-description{
-color:#94a3b8;
-max-width:600px;
-margin-bottom:50px;
-}
-
-.contact-list{
-display:flex;
-flex-direction:column;
-gap:30px;
-max-width:600px;
-}
-
-.contact-item{
-padding-bottom:20px;
-border-bottom:1px solid rgba(255,255,255,0.05);
-}
-
-.contact-item span{
-display:block;
-font-size:0.8rem;
-letter-spacing:1px;
-text-transform:uppercase;
-color:#00e5ff;
-margin-bottom:8px;
-}
-
-.contact-item a{
-text-decoration:none;
-color:#fff;
-font-size:1.1rem;
-transition:0.3s;
-}
-
-.contact-item a:hover{
-color:#00e5ff;
-}
-
-/* ===== FOOTER ===== */
-footer{
-background:#111;
-padding:40px 0;
-text-align:center;
-color:#888;
-margin-top:60px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-.hero-content{
-flex-direction:column;
-text-align:center;
-}
-.hero-img img{
-width:300px;
-}
-.hero-text h1{
-font-size:2.8rem;
-}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -238,7 +14,7 @@ font-size:2.8rem;
 <nav>
 <div class="container">
 <div class="logo">RATUL</div>
-<div>
+<div class="nav-links">
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#impact">Impact</a>
@@ -250,25 +26,31 @@ font-size:2.8rem;
 
 <section class="hero">
 <div class="container hero-content">
+
 <div class="hero-text">
 <h1>Sharif Azmaine <span>Ratul</span></h1>
 <h2>Admin Executive & Digital Marketing Professional</h2>
 <p>
-Structured logistics operations specialist delivering documentation accuracy, operational efficiency, and measurable digital growth.
+Structured logistics operations specialist delivering documentation accuracy,
+operational efficiency, and measurable digital growth.
 </p>
 <a href="resume.pdf" download class="btn">Download CV</a>
 </div>
+
 <div class="hero-img">
 <img src="images/profile.jpg" alt="Sharif Azmaine Ratul">
 </div>
+
 </div>
 </section>
 
 <section id="about">
 <div class="container">
 <h2 class="section-title">About Me</h2>
-<p class="contact-description">
-Results-driven Admin Executive with hands-on experience in freight forwarding, B/L processing, and workflow optimization. Alongside corporate operations, I execute performance-focused digital marketing strategies.
+<p class="section-text">
+Results-driven Admin Executive with hands-on experience in freight forwarding,
+B/L processing, and workflow optimization. Alongside corporate operations,
+I execute performance-focused digital marketing strategies.
 </p>
 </div>
 </section>
@@ -276,38 +58,45 @@ Results-driven Admin Executive with hands-on experience in freight forwarding, B
 <section id="experience">
 <div class="container">
 <h2 class="section-title">Professional Experience</h2>
+
 <div class="card">
 <h3>Admin Executive — Savino Del Bene</h3>
-<p style="color:#9aa0a6;">October 2025 – Present | Chattogram</p>
+<p>October 2025 – Present | Chattogram</p>
 </div>
+
 <div class="card">
 <h3>Digital Marketing Specialist (Freelance)</h3>
-<p style="color:#9aa0a6;">2022 – 2025</p>
+<p>2022 – 2025</p>
 </div>
+
 </div>
 </section>
 
 <section id="impact">
 <div class="container">
 <h2 class="section-title">Professional Impact</h2>
+
 <div class="skills-grid">
 <div class="skill">300+ Bills of Lading Processed</div>
 <div class="skill">100% Documentation Accuracy</div>
 <div class="skill">50+ Digital Campaigns Executed</div>
 <div class="skill">International Freight Coordination</div>
 </div>
+
 </div>
 </section>
 
 <section id="skills">
 <div class="container">
 <h2 class="section-title">Core Competencies</h2>
+
 <div class="skills-grid">
 <div class="skill">Freight Documentation</div>
 <div class="skill">Workflow Optimization</div>
 <div class="skill">Digital Strategy</div>
 <div class="skill">SEO & Marketing</div>
 </div>
+
 </div>
 </section>
 
@@ -315,28 +104,27 @@ Results-driven Admin Executive with hands-on experience in freight forwarding, B
 <div class="container">
 <h2 class="section-title">Let’s Connect</h2>
 
-<p class="contact-description">
-Open to logistics operations roles, structured administrative positions, and digital marketing collaborations.
+<p class="section-text">
+Open to logistics operations roles, structured administrative positions,
+and digital marketing collaborations.
 </p>
 
-<div class="contact-list">
+<div class="contact-grid">
 
-<div class="contact-item">
+<a href="mailto:sharif.azmaine67@gmail.com" class="contact-box">
 <span>Email</span>
-<a href="mailto:sharif.azmaine67@gmail.com">sharif.azmaine67@gmail.com</a>
-</div>
-
-<div class="contact-item">
-<span>LinkedIn</span>
-<a href="https://www.linkedin.com/in/sharif-azmaine-ratul-4b04b0335/" target="_blank">
-linkedin.com/in/sharif-azmaine-ratul
+<p>sharif.azmaine67@gmail.com</p>
 </a>
-</div>
 
-<div class="contact-item">
+<a href="https://www.linkedin.com/in/sharif-azmaine-ratul-4b04b0335/" target="_blank" class="contact-box">
+<span>LinkedIn</span>
+<p>linkedin.com/in/sharif-azmaine-ratul</p>
+</a>
+
+<a href="tel:+8801701064355" class="contact-box">
 <span>Phone</span>
-<a href="tel:+8801701064355">+880 1701-064355</a>
-</div>
+<p>+880 1701-064355</p>
+</a>
 
 </div>
 </div>
