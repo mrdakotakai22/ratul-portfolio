@@ -245,6 +245,21 @@ Alongside corporate responsibilities, I execute performance-driven digital marke
 <footer>
 © 2026 Sharif Azmaine Ratul
 </footer>
+<script>
+const cards = document.querySelectorAll('.card');
+
+function revealCards() {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealCards);
+revealCards();
+</script>
 
 </body>
 </html>
