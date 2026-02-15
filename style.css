@@ -3,6 +3,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Inter',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -12,14 +13,14 @@ line-height:1.6;
 overflow-x:hidden;
 }
 
-/* ===== GLOW RESTORED ===== */
+/* Glow */
 body::before{
 content:"";
 position:fixed;
 top:-250px;
 right:-250px;
-width:800px;
-height:800px;
+width:900px;
+height:900px;
 background:radial-gradient(circle, rgba(0,229,255,0.35), transparent 70%);
 filter:blur(120px);
 z-index:-1;
@@ -47,7 +48,7 @@ max-width:700px;
 margin-bottom:50px;
 }
 
-/* Navigation */
+/* Nav */
 nav{
 position:fixed;
 width:100%;
@@ -55,6 +56,11 @@ background:rgba(15,15,25,0.85);
 backdrop-filter:blur(12px);
 padding:20px 0;
 z-index:1000;
+transition:0.3s;
+}
+
+nav.scrolled{
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 nav .container{
@@ -164,10 +170,14 @@ gap:25px;
 background:rgba(22,22,34,0.6);
 padding:25px;
 border-radius:15px;
+transition:0.3s;
 }
 
-/* ===== CONTACT BOXES ===== */
+.skill:hover{
+transform:translateY(-6px);
+}
 
+/* Contact */
 .contact-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -202,6 +212,18 @@ color:#cbd5e1;
 .contact-box:hover{
 transform:translateY(-10px);
 border:1px solid rgba(0,229,255,0.4);
+}
+
+/* Reveal Animation */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
 }
 
 /* Footer */
