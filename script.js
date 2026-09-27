@@ -1,0 +1,11 @@
+const body=document.body,themeToggle=document.getElementById("themeToggle"),menuToggle=document.getElementById("menuToggle"),mobileMenu=document.getElementById("mobileMenu"),navbar=document.getElementById("navbar");
+const saved=localStorage.getItem("ratul-theme");if(saved==="light")body.classList.add("light");
+themeToggle.addEventListener("click",()=>{body.classList.toggle("light");localStorage.setItem("ratul-theme",body.classList.contains("light")?"light":"dark");themeToggle.textContent=body.classList.contains("light")?"☀":"☾"});
+menuToggle.addEventListener("click",()=>mobileMenu.classList.toggle("open"));
+document.querySelectorAll(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>mobileMenu.classList.remove("open")));
+window.addEventListener("scroll",()=>navbar.classList.toggle("scrolled",scrollY>20));
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");ro.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>ro.observe(e));
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,t=+el.dataset.target,start=performance.now();function run(n){let p=Math.min((n-start)/1400,1),v=1-Math.pow(1-p,3);el.textContent=Math.floor(v*t);if(p<1)requestAnimationFrame(run);else el.textContent=t}requestAnimationFrame(run);co.unobserve(el)}),{threshold:.7});
+document.querySelectorAll(".stat-number[data-target]").forEach(e=>co.observe(e));
+const glow=document.querySelector(".cursor-glow");addEventListener("pointermove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px"});
